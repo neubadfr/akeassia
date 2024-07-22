@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ffurs\\apps\\akeassia2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\akeassia2.bundle.scp.css",
+      "PackagePath": "staticwebassets\\akeassia2.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\ffurs\\apps\\akeassia2\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\ffurs\\apps\\akeassia2\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ffurs\\apps\\akeassia2\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ffurs\\apps\\akeassia2\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.akeassia2.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.akeassia2.props",
+      "PackagePath": "build\\akeassia2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.akeassia2.props",
+      "PackagePath": "buildMultiTargeting\\akeassia2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.akeassia2.props",
+      "PackagePath": "buildTransitive\\akeassia2.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

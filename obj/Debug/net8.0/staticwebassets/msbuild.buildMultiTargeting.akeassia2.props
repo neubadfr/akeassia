@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\akeassia2.props" />
+</Project>
