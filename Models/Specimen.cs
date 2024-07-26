@@ -12,7 +12,10 @@ namespace akeassia2.Models
         public string country{ get; set;}
         public string locality{ get; set;}
         public string number{ get; set;}
+        public string WcvpID{ get; set; }
+        public Wcvp Wcvp{ get; set; }
         public int? NomenclaturalTypeID{ get; set;}
         public NomenclaturalType NomenclaturalType{ get; set;}
+
     }
 }

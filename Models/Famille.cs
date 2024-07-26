@@ -7,6 +7,7 @@ namespace akeassia2.Models
 {
     public class Famille
     {
-        
+        public string FamilleId { get; set; }
+        public string FamilleDescription{ get; set; }
     }
 }

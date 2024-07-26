@@ -7,6 +7,7 @@ namespace akeassia2.Models
 {
     public class NomenclaturalType
     {
-        
+        public int NomenclaturalTypeID { get; set; }
+        public string NomenclaturalTypeName {get;set;}
     }
 }
