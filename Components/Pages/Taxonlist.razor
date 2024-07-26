@@ -1,0 +1,21 @@
+@page "/taxonlist/{name}/{rank}"
+@inject IWcvpService wService
+@code{
+    [Parameter]
+    public string name{get;set;}
+    [Parameter]
+    public string rank{get;set;}
+    List<string> childlist{get;set;}
+    List<Wcvp> wcvps=new List<Wcvp>();
+    protected override async Task OnInitializedAsync(){
+        wcvps=await wService.GetWcvpsAsync(name,"");
+        childlist=wcvps.Where(a=>a.taxon_rank!=rank).Select(e=>e.species).ToList();
+    }
+
+
+}
+<ul>
+@foreach(string child in childlist){
+<li>@child</li>
+}
+</ul>

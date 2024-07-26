@@ -132,3 +132,6 @@ C:\Users\ffurs\apps\akeassia2\obj\Debug\net8.0\refint\akeassia2.dll
 C:\Users\ffurs\apps\akeassia2\obj\Debug\net8.0\akeassia2.pdb
 C:\Users\ffurs\apps\akeassia2\obj\Debug\net8.0\akeassia2.genruntimeconfig.cache
 C:\Users\ffurs\apps\akeassia2\obj\Debug\net8.0\ref\akeassia2.dll
+C:\Users\ffurs\apps\akeassia2\obj\Debug\net8.0\akeassia2.sourcelink.json
+C:\Users\ffurs\apps\akeassia2\bin\Debug\net8.0\Npgsql.dll
+C:\Users\ffurs\apps\akeassia2\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

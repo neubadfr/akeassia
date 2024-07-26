@@ -1,0 +1,52 @@
+@page "/eflore"
+@inject IWcvpService wService
+<style>
+    ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0em, max-content));
+    grid-auto-flow: column;
+    list-style: none;
+    padding: 0;
+    margin: 1em;
+    gap: 5px
+}
+
+li:before {
+    content: "";
+  }
+  
+ul:before {
+  content: '';
+  grid-column: -1;
+  width: 0;
+  grid-row: 1 /40;  /*6 rows */
+}
+
+li {
+  background: silver;
+  padding: 0.15em;
+  margin: 0;
+}
+
+li:first-letter {
+  color:tomato; /*ketchup*/
+}
+</style>
+
+<h1>Familles de plantes vasculaires de la Côte d'Ivoire</h1>
+<ul>
+    @foreach(string item in wcvps.Select(e=>e.family).Distinct().Order()){
+        <li><a href="family/@item">@item</a></li>
+    }   
+</ul>
+
+
+@code{
+    List<Wcvp> wcvps {get;set;}=new();
+    [Parameter]
+    public int rankid{get;set;}
+
+    protected override async Task OnInitializedAsync(){
+        wcvps=await wService.GetWcvpsAsync("","");
+    }
+}

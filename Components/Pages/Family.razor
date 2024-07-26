@@ -1,0 +1,54 @@
+@page "/family/{family}"
+@inject IWcvpService wService
+<h1>@family</h1>
+<style>
+    ul{
+        list-style: none;
+    }
+    li{
+        display: inline-block;
+        margin-right: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        La famille des <b>@family</b> compte @wcvps.Where(e=>e.taxon_rank=="Genus").Count() @if(wcvps.Where(e=>e.taxon_rank=="Genus").Count()==1){
+            <text> genre</text>
+        }else{
+            <text> genres</text>
+        } en Côte d'Ivoire. 
+    </div>
+    
+ 
+        <div class="row">
+            <ul>
+                 @foreach(var item in wcvps.Where(e=>e.taxon_rank=="Genus").OrderBy(e=>e.genus)){
+                        <li><em>@item.genus</em></li>
+                }
+            </ul>
+        </div>
+           
+
+
+       
+            
+               
+          
+
+</div>
+
+
+
+
+
+@code{
+    [Parameter]
+    public string family {get;set;}
+    List<Wcvp> wcvps=new List<Wcvp>();
+    protected override async Task OnInitializedAsync(){
+        wcvps=await wService.GetWcvpsAsync("",family);
+    }
+    
+
+}

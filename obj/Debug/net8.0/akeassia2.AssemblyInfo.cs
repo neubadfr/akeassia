@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("akeassia2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c940d5dcfe3314361384dae8281d377fb509fe5")]
 [assembly: System.Reflection.AssemblyProductAttribute("akeassia2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("akeassia2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

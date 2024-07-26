@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inject IWcvpService wService
 
 <PageTitle>Home</PageTitle>
 <p><h1>La Flore de la Côte d'Ivoire</h1></p>
@@ -6,15 +7,29 @@
 <div class="container">
     <div class="row">
         <div class="col-9">
-             <p>est un outils fournissant des informations sur les  xxxxx plantes vasculaires et xxxx non vasculaires de ce pays. 
-Des fascilues sont produits pour chacune des familles de la flore.
-La e-flore propose des informations sur l'écologie, la description, l'ethnobotanique des différents taxons traités. Ces informations sont régulièrement mises à jour. </p>
+             <p>est un outil fournissant des informations sur les @wcvp_names.Where(e=>e.taxon_rank=="Genus").Count() genres et @wcvp_names.Where(e=>e.taxon_rank!="Genus").Count() taxons de rang spécifique et subspécifique de plantes vasculaires. 
+Des fascicules sont produits pour chacune des @wcvp_names.Select(e=>e.family).Distinct().Count() familles de la flore.
+ </p>
+ <p>La e-flore propose des informations sur l'écologie, la description, l'ethnobotanique des différents taxons traités. Ces informations sont régulièrement mises à jour.</p>
         </div>
         <div class="col-3">
 
         </div>
     </div>
+    <div class="row">Pour toutes informations contacter xxxxx. </div>
+    <div class="row">
+        <h2>Comité de rédaction</h2>
+        <ul>
+            <li>Neuba Danho Fursy-Rodelec</li>
+        </ul>
+        
+    </div>
 </div>
 
 
-Pour toutes informations contacter xxxxx. 
+@code{
+    List<Wcvp> wcvp_names=new List<Wcvp>();
+    protected override async Task OnInitializedAsync(){
+        wcvp_names=await wService.GetWcvpsAsync("","");
+    }
+}
